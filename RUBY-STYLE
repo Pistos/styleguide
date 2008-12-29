@@ -21,8 +21,10 @@ when you contribute to my code, please follow these rules:"
 * Put spaces around operators, and after commas, colons and semicolons
   (unless at EOL, and besides symbols).
 
-* Put a space after opening parentheses and brackets, and before closing
-  parentheses and brackets.  e.g. method( hash[ :symbol ] )
+* Put a space after opening parentheses, brackets and braces; and before closing
+  parentheses, brackets and braces.  e.g.:
+
+  iterator( hash[ :symbol ] ) { |o| o.foo }
 
 * Use two spaces before statement modifiers (postfix
   if/unless/while/until/rescue).
@@ -45,6 +47,17 @@ when you contribute to my code, please follow these rules:"
 * Avoid trailing whitespace.
 
 * Indent "when" as deep as "case".
+
+* Always use a comma after the last element of list literals.  e.g.
+
+  [
+    'foo',
+    'bar',
+  ]
+  {
+    'bin' => 'baz',
+    'blue' => 'green',
+  }
 
 
 == Syntax
@@ -129,7 +142,7 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid long methods.
 
-* Avoid long parameter lists.
+* Avoid having too many parameters.
 
 * Use def self.method to define singleton methods.
 
