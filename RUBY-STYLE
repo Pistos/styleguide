@@ -26,8 +26,11 @@ when you contribute to my code, please follow these rules:"
 
   iterator( hash[ :symbol ] ) { |o| o.foo }
 
-* Use two spaces before statement modifiers (postfix
-  if/unless/while/until/rescue).
+* Only use postfix modifiers (if/unless/while/until/rescue) if the modified
+  expression is extremely short; otherwise use a full code block (if-end,
+  etc.)
+
+* Use two spaces before postfix modifiers.
 
 * Use an empty line between defs.
 
@@ -86,7 +89,9 @@ when you contribute to my code, please follow these rules:"
 
 * Multiline {} blocks are fine.
 
-* Avoid "return" where not required.
+* Only use "return" when exiting a method (i.e. never at the end).
+
+* Use "return" only at the top of a method, if at all.
 
 * Avoid line continuation (\) where not required.
 
