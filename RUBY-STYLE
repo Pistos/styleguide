@@ -149,6 +149,21 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid having too many parameters.
 
+* Prefer guard clauses over method-encompassing conditional blocks.  i.e.
+
+  # Bad
+  def foo
+    if condition
+      # many lines
+    end
+  end
+
+  # Good
+  def foo
+    return if condition
+    # many lines
+  end
+
 * Use def self.method to define singleton methods.
 
 * Add "global" methods to Kernel (if you have to) and make them private.
