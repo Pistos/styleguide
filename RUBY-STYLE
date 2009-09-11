@@ -63,6 +63,18 @@ when you contribute to my code, please follow these rules:"
     'blue' => 'green',
   }
 
+* Never indent relative to an opening parenthesis, bracket, etc.  Always indent
+  just one level deeper.  e.g.
+
+  # Bad
+  some_hash = {
+                'foo' => 'bar',
+              }
+
+  # Good
+  some_hash = {
+    'foo' => 'bar',
+  }
 
 == Syntax
 
