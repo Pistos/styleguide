@@ -41,6 +41,8 @@ when you contribute to my code, please follow these rules:"
   long conditional expressions and lists (method arguments, Enumerable
   literals, etc.)
 
+* Avoid long method chains on a single line (break it up across multiple lines).
+
 * Use empty lines to break up a long method into logical paragraphs.  The
   return value of a long method should be considered a paragraph on its own.
 
@@ -155,7 +157,7 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid having too many parameters.
 
-* Prefer guard clauses over method-encompassing conditional blocks.  i.e.
+* Prefer guard clauses over method-encompassing conditional blocks.  e.g.
 
   # Bad
   def foo
@@ -168,6 +170,26 @@ when you contribute to my code, please follow these rules:"
   def foo
     return  if condition
     # many lines
+  end
+
+* Sort conditional blocks by size (smaller first).  e.g.
+
+  # Avoid
+  if condition
+    do_many
+    things
+    here
+  else
+    one_line
+  end
+
+  # Prefer
+  if ! condition
+    one_line
+  else
+    do_many
+    things
+    here
   end
 
 * Use def self.method to define singleton methods.
