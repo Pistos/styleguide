@@ -21,8 +21,8 @@ when you contribute to my code, please follow these rules:"
 * Put spaces around operators, and after commas, colons and semicolons
   (unless at EOL, and besides symbols).
 
-* Put a space after opening parentheses, brackets and braces; and before closing
-  parentheses, brackets and braces.  e.g.:
+* Put a space after opening parentheses, brackets and braces; and before
+  closing parentheses, brackets and braces.  e.g.:
 
   iterator( hash[ :symbol ] ) { |o| o.foo }
 
@@ -34,8 +34,7 @@ when you contribute to my code, please follow these rules:"
 
 * Use an empty line between defs.
 
-* Use RDoc and its conventions for API documentation.  Don't put an
-  empty line between the comment block and the def.
+* Don't put an empty line between comment block and def.
 
 * Use newlines liberally, even within a single Ruby expression, if it will
   improve readability (by clarifying expression components).  e.g. break up
@@ -45,9 +44,9 @@ when you contribute to my code, please follow these rules:"
 * Use empty lines to break up a long method into logical paragraphs.  The
   return value of a long method should be considered a paragraph on its own.
 
-* Keep lines fewer than 80 characters.
+* Aim to have lines shorter than 80 characters.
 
-* Avoid trailing whitespace.
+* Never have trailing whitespace.  (Enable relevant editor settings, if any.)
 
 * Indent "when" as deep as "case".
 
@@ -79,19 +78,22 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid multiline ternary "? :"; use if-else instead.
 
-* Suppress superfluous parentheses when calling methods, but keep them
-  when calling "functions" (using the return value in the same line)
+* Use parentheses with method calls except when calling single-argument methods
+  and not using the return value.
 
     x = Math.sin( y )
+    place_at( row, col )
     array.delete e
+    puts value
 
 * Use {} when using the return value of a block; use do-end otherwise.
 
 * Multiline {} blocks are fine.
 
-* Only use "return" when exiting a method (i.e. never at the end).
+* Only use "return" when prematurely exiting a method (i.e. never at the end of
+  a method).
 
-* Use "return" only at the top of a method, if at all.
+* Use "return" only at or very near the top of a method, if at all.
 
 * Avoid line continuation (\) where not required.
 
@@ -110,8 +112,8 @@ when you contribute to my code, please follow these rules:"
 * Use snake_case for methods and variables; avoid concatenating words
   (e.g. badlychosenidentifier)
 
-* Use CamelCase for classes and modules.  (Keep acronyms like HTTP,
-  RFC, XML uppercase.)
+* Use CamelCase for classes and modules.  Keep acronyms like HTTP,
+  RFC, XML uppercase.
 
 * Use SCREAMING_SNAKE_CASE for other constants.
 
@@ -138,9 +140,13 @@ when you contribute to my code, please follow these rules:"
 
 == Comments
 
-* Comments longer than a word are capitalized and use punctuation.
-
 * Avoid comments; aim for self-explanatory code.
+
+* Use yardoc and its conventions for API documentation.  http://yard.soen.ca/
+
+* Prefer method and class comments; avoid comments inside methods.
+
+* Comments longer than a word should be capitalized and use punctuation.
 
 
 == The rest
@@ -160,7 +166,7 @@ when you contribute to my code, please follow these rules:"
 
   # Good
   def foo
-    return if condition
+    return  if condition
     # many lines
   end
 
@@ -170,12 +176,9 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid alias when alias_method will do.
 
-* Write for 1.8, but avoid doing things you know that will break in 1.9.
+* Write for Ruby 1.9+, except when required to maintain legacy code.
 
 * Avoid needless metaprogramming.
-
-
-== General
 
 * Do not mess around in core classes when writing libraries.
 
