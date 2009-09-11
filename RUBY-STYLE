@@ -204,7 +204,7 @@ when you contribute to my code, please follow these rules:"
 
 * Do not mess around in core classes when writing libraries.
 
-* Keep the code simple.
+* Keep things as simple as possible (but no simpler).
 
 * Be consistent.
 
