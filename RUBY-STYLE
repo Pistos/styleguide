@@ -180,7 +180,7 @@ when you contribute to my code, please follow these rules:"
 
   # Good
   def foo
-    return  if condition
+    return  if ! condition
     # many lines
   end
 
