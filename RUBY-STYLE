@@ -21,10 +21,16 @@ when you contribute to my code, please follow these rules:"
 * Put spaces around operators, and after commas, colons and semicolons
   (unless at EOL, and besides symbols).
 
-* Put a space after opening parentheses, brackets and braces; and before
-  closing parentheses, brackets and braces.  e.g.:
+* Put a space after opening parentheses and braces; and before
+  closing parentheses and braces.  e.g.:
 
   iterator( hash[ :symbol ] ) { |o| o.foo }
+
+* Brackets may or may not be accompanied by space, at your discretion.
+  These are both okay:
+
+  my_hash[ :foo ]
+  my_hash[:foo]
 
 * Only use postfix modifiers (if/unless/while/until/rescue) if the modified
   expression is extremely short; otherwise use a full code block (if-end,
