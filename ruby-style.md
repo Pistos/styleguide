@@ -1,4 +1,4 @@
-= Pistos' Ruby Style Guide
+# Pistos' Ruby Style Guide
 
 (forked from Christian Neukirchen's Ruby Style Guide)
 
@@ -10,7 +10,7 @@ code however they want, write and follow their own style guides, but
 when you contribute to my code, please follow these rules:"
 
 
-== Formatting
+## Formatting
 
 * Use ASCII (or UTF-8, if you have to).
 
@@ -82,7 +82,7 @@ when you contribute to my code, please follow these rules:"
     'foo' => 'bar',
   }
 
-== Syntax
+## Syntax
 
 * Use parentheses with def when there are arguments.
 
@@ -127,7 +127,7 @@ when you contribute to my code, please follow these rules:"
 * Only use "common" sigil variables.
 
 
-== Naming
+## Naming
 
 * Use snake_case for methods and variables; avoid concatenating words
   (e.g. badlychosenidentifier)
@@ -158,7 +158,7 @@ when you contribute to my code, please follow these rules:"
 * Prefer map over collect, find over detect, find_all over select.
 
 
-== Comments
+## Comments
 
 * Avoid comments; aim for self-explanatory code.
 
@@ -169,7 +169,7 @@ when you contribute to my code, please follow these rules:"
 * Comments longer than a word should be capitalized and use punctuation.
 
 
-== The rest
+## The rest
 
 * Avoid long methods.
 
