@@ -140,6 +140,25 @@ when you contribute to my code, please follow these rules:"
 * When choosing identifiers, reader understanding trumps laziness and
   inability to type fast.
 
+* After initially clarifying its meaning, use a very short identifier when
+  a variable appears several times in a small area.  Examples:
+
+    e = doodad.last_error
+    if e.severe?
+      log e
+    else
+      process e
+    end
+
+    def binomial_probability( num_successes, num_trials, prob_success, prob_failure )
+      n, k, p, q = num_successes, num_trials, prob_success, prob_failure
+      (
+        n.facto / (
+          k.facto * ( n - k ).facto
+        )
+      ) * p**k * q**(n-k)
+    end
+
 * When defining binary operators, name the argument "other".
 
 * Prefer map over collect, find over detect, find_all over select.
