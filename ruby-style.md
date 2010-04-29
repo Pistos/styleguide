@@ -138,20 +138,7 @@ when you contribute to my code, please follow these rules:"
 * Use SCREAMING_SNAKE_CASE for other constants.
 
 * When choosing identifiers, reader understanding trumps laziness and
-  inability to type fast.  Exception for small-scope variables...
-
-* Use one-letter variables for short block/method parameters, according to
-  this scheme:
-
-    e: rescued exception or error
-    f: files and file names
-    i, j: indexes
-    k: the key part of a hash entry
-    m: methods
-    o: any object
-    s: strings
-    v: any value
-    v: the value part of a hash entry
+  inability to type fast.
 
 * When defining binary operators, name the argument "other".
 
