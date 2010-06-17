@@ -163,6 +163,26 @@ when you contribute to my code, please follow these rules:"
 
 * Prefer map over collect, find over detect, find_all over select.
 
+* Write greppable code.
+
+    # Bad
+    [ 'bar', 'baz' ].each do |x|
+      define_method "foo_#{x}".to_sym do
+        puts "Hello #{x.upcase}"
+      end
+    end
+
+    # Better
+    def greet_upcase( x )
+      puts "Hello #{x.upcase}"
+    end
+    def foo_bar
+      greet_upcase 'bar'
+    end
+    def foo_baz
+      greet_upcase 'baz'
+    end
+
 
 ## Comments
 
