@@ -163,24 +163,32 @@ when you contribute to my code, please follow these rules:"
 
 * Prefer map over collect, find over detect, find_all over select.
 
-* Write greppable code.
+* Write greppable code.  Don't build identifiers or external/remote names with
+  concatenation or interpolation.
 
     # Bad
-    [ 'bar', 'baz' ].each do |x|
-      define_method "foo_#{x}".to_sym do
-        puts "Hello #{x.upcase}"
+    class ExternalAPI
+      def initialize
+        @client = RESTClient.new
+      end
+      [ 'foo', 'bar' ].each do |x|
+        define_method "process_#{x}".to_sym do
+          @client.call "http://example.com/api/process-#{x}.xml"
+        end
       end
     end
 
     # Better
-    def greet_upcase( x )
-      puts "Hello #{x.upcase}"
-    end
-    def foo_bar
-      greet_upcase 'bar'
-    end
-    def foo_baz
-      greet_upcase 'baz'
+    class ExternalAPI
+      def initialize
+        @client = RESTClient.new
+      end
+      def process_foo
+        @client.call "http://example.com/api/process-foo.xml"
+      end
+      def process_bar
+        @client.call "http://example.com/api/process-bar.xml"
+      end
     end
 
 
