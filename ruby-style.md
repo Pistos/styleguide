@@ -24,13 +24,13 @@ when you contribute to my code, please follow these rules:"
 * Put a space after opening parentheses and braces; and before
   closing parentheses and braces.  e.g.:
 
-    iterator( hash[ :symbol ] ) { |o| o.foo }
+        iterator( hash[ :symbol ] ) { |o| o.foo }
 
 * Brackets may or may not be accompanied by space, at your discretion.
   These are both okay:
 
-    my_hash[ :foo ]
-    my_hash[:foo]
+        my_hash[ :foo ]
+        my_hash[:foo]
 
 * Only use postfix modifiers (if/unless/while/until/rescue) if the modified
   expression is extremely short; otherwise use a full code block (if-end,
@@ -60,27 +60,27 @@ when you contribute to my code, please follow these rules:"
 
 * Always use a comma after the last element of list literals.  e.g.
 
-    [
-      'foo',
-      'bar',
-    ]
-    {
-      'bin' => 'baz',
-      'blue' => 'green',
-    }
+        [
+          'foo',
+          'bar',
+        ]
+        {
+          'bin' => 'baz',
+          'blue' => 'green',
+        }
 
 * Never indent relative to an opening parenthesis, bracket, etc.  Always indent
   just one level deeper.  e.g.
 
-    # Bad
-    some_hash = {
-                  'foo' => 'bar',
-                }
+        # Bad
+        some_hash = {
+                      'foo' => 'bar',
+                    }
 
-    # Good
-    some_hash = {
-      'foo' => 'bar',
-    }
+        # Good
+        some_hash = {
+          'foo' => 'bar',
+        }
 
 ## Syntax
 
@@ -101,10 +101,10 @@ when you contribute to my code, please follow these rules:"
 * Use parentheses with method calls except when calling single-argument methods
   and not using the return value.
 
-    x = Math.sin( y )
-    place_at( row, col )
-    array.delete e
-    puts value
+        x = Math.sin( y )
+        place_at( row, col )
+        array.delete e
+        puts value
 
 * Use {} when using the return value of a block; use do-end otherwise.
 
@@ -119,8 +119,8 @@ when you contribute to my code, please follow these rules:"
 
 * Never use assignment in a condition:
 
-    # Avoid:
-    if v = array.grep(/foo/) ...
+        # Avoid:
+        if v = array.grep(/foo/) ...
 
 * Use ||= freely.
 
@@ -143,21 +143,21 @@ when you contribute to my code, please follow these rules:"
 * After initially clarifying its meaning, use a very short identifier when
   a variable appears several times in a small area.  Examples:
 
-    e = doodad.last_error
-    if e.severe?
-      log e
-    else
-      process e
-    end
+        e = doodad.last_error
+        if e.severe?
+          log e
+        else
+          process e
+        end
 
-    def binomial_probability( num_successes, num_trials, prob_success, prob_failure )
-      n, k, p, q = num_successes, num_trials, prob_success, prob_failure
-      (
-        n.facto / (
-          k.facto * ( n - k ).facto
-        )
-      ) * p**k * q**(n-k)
-    end
+        def binomial_probability( num_successes, num_trials, prob_success, prob_failure )
+          n, k, p, q = num_successes, num_trials, prob_success, prob_failure
+          (
+            n.facto / (
+              k.facto * ( n - k ).facto
+            )
+          ) * p**k * q**(n-k)
+        end
 
 * When defining binary operators, name the argument "other".
 
@@ -166,30 +166,30 @@ when you contribute to my code, please follow these rules:"
 * Write greppable code.  Don't build identifiers or external/remote names with
   concatenation or interpolation.
 
-    # Bad
-    class ExternalAPI
-      def initialize
-        @client = RESTClient.new
-      end
-      [ 'foo', 'bar' ].each do |x|
-        define_method "process_#{x}".to_sym do
-          @client.call "http://example.com/api/process-#{x}.xml"
+        # Bad
+        class ExternalAPI
+          def initialize
+            @client = RESTClient.new
+          end
+          [ 'foo', 'bar' ].each do |x|
+            define_method "process_#{x}".to_sym do
+              @client.call "http://example.com/api/process-#{x}.xml"
+            end
+          end
         end
-      end
-    end
 
-    # Better
-    class ExternalAPI
-      def initialize
-        @client = RESTClient.new
-      end
-      def process_foo
-        @client.call "http://example.com/api/process-foo.xml"
-      end
-      def process_bar
-        @client.call "http://example.com/api/process-bar.xml"
-      end
-    end
+        # Better
+        class ExternalAPI
+          def initialize
+            @client = RESTClient.new
+          end
+          def process_foo
+            @client.call "http://example.com/api/process-foo.xml"
+          end
+          def process_bar
+            @client.call "http://example.com/api/process-bar.xml"
+          end
+        end
 
 
 ## Comments
@@ -211,38 +211,38 @@ when you contribute to my code, please follow these rules:"
 
 * Prefer guard clauses over method-encompassing conditional blocks.  e.g.
 
-    # Bad
-    def foo
-      if condition
-        # many lines
-      end
-    end
+        # Bad
+        def foo
+          if condition
+            # many lines
+          end
+        end
 
-    # Good
-    def foo
-      return  if ! condition
-      # many lines
-    end
+        # Good
+        def foo
+          return  if ! condition
+          # many lines
+        end
 
 * Sort conditional blocks by size (smaller first).  e.g.
 
-    # Avoid
-    if condition
-      do_many
-      things
-      here
-    else
-      one_line
-    end
+        # Avoid
+        if condition
+          do_many
+          things
+          here
+        else
+          one_line
+        end
 
-    # Prefer
-    if ! condition
-      one_line
-    else
-      do_many
-      things
-      here
-    end
+        # Prefer
+        if ! condition
+          one_line
+        else
+          do_many
+          things
+          here
+        end
 
 * Use def self.method to define singleton methods.
 
