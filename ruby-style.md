@@ -56,6 +56,8 @@ when you contribute to my code, please follow these rules:"
 
 * Never have trailing whitespace.  (Enable relevant editor settings, if any.)
 
+* Always make the last line of a source code file an empty line.
+
 * Indent "when" as deep as "case".
 
 * Always use a comma after the last element of list literals.  e.g.
@@ -89,6 +91,8 @@ when you contribute to my code, please follow these rules:"
 * Avoid "for".
 
 * Never use "then".
+
+* Never use "unless"; always use "if !"
 
 * Use when x; ... for one-line cases.
 
@@ -139,6 +143,28 @@ when you contribute to my code, please follow these rules:"
 
 * When choosing identifiers, reader understanding trumps laziness and
   inability to type fast.
+
+* When naming several related things, name them so that they become grouped
+  together logically when sorted.  Towards this end, tend to put nouns before
+  adjectives.  Think of the words as namespaces.  Examples:
+
+        # Less desirable:
+        opened_file
+        current_file
+        favourite_company
+        twitter_token
+        facebook_token
+        current_page
+        next_page
+
+        # More desirable:
+        file_opened
+        file_current
+        company_favourite
+        token_twitter
+        token_facebook
+        page_current
+        page_next
 
 * After initially clarifying its meaning, use a very short identifier when
   a variable appears several times in a small area.  Examples:
@@ -255,6 +281,10 @@ when you contribute to my code, please follow these rules:"
 * Avoid needless metaprogramming.
 
 * Do not mess around in core classes when writing libraries.
+
+* Make your code read vertically, not horizontally;
+  make it tall, not wide;
+  many short lines, not few long lines.
 
 * Keep things as simple as possible (but no simpler).
 
