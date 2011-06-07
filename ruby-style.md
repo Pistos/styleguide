@@ -32,7 +32,7 @@ when you contribute to my code, please follow these rules:"
         my_hash[ :foo ]
         my_hash[:foo]
 
-* Only use postfix modifiers (if/unless/while/until/rescue) if the modified
+* Only use postfix modifiers (if/while/until/rescue) if the modified
   expression is extremely short; otherwise use a full code block (if-end,
   etc.)
 
