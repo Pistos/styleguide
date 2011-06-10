@@ -102,15 +102,20 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid multiline ternary "? :"; use if-else instead.
 
-* Use parentheses with method calls except when calling single-argument methods
-  and not using the return value.
+* Use parentheses with method calls using the return value, or when it would improve readability.
 
         x = Math.sin( y )
-        place_at( row, col )
+        place_at row, col
         array.delete e
         puts value
+        method_name(
+          many,
+          arguments: given,
+          to: the,
+          method: nil
+        )
 
-* Use {} when using the return value of a block; use do-end otherwise.
+* Use {} when using the return value of a block, or when a small block can fit on one line; use do-end otherwise.
 
 * Multiline {} blocks are fine.
 
@@ -119,7 +124,7 @@ when you contribute to my code, please follow these rules:"
 
 * Use "return" only at or very near the top of a method, if at all.
 
-* Avoid line continuation (\) where not required.
+* Avoid line continuation (backslash at EOL) where not required.
 
 * Never use assignment in a condition:
 
