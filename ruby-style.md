@@ -126,10 +126,15 @@ when you contribute to my code, please follow these rules:"
 
 * Avoid line continuation (backslash at EOL) where not required.
 
-* Never use assignment in a condition:
+* Never use assignment in a conditional expression:
 
         # Avoid:
         if v = array.grep(/foo/) ...
+
+        # Avoid:
+        def has_enough_foo?
+          ( v = calculation(@foo) ) && v > 10
+        end
 
 * Use ||= freely.
 
