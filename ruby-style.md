@@ -9,6 +9,14 @@ me and have helped producing high quality code.  Everyone is free to
 code however they want, write and follow their own style guides, but
 when you contribute to my code, please follow these rules:"
 
+## Principles
+
+Almost all the individual points below are manifestations of an intent to
+adhere to the following core principles:
+
+1. Communicate design and intent.
+2. Reveal structure and hierarchy.
+3. Make expressions distinct.
 
 ## Formatting
 
@@ -24,7 +32,7 @@ when you contribute to my code, please follow these rules:"
 * Put a space after opening parentheses and braces; and before
   closing parentheses and braces.  e.g.:
 
-        iterator( hash[ :symbol ] ) { |o| o.foo }
+        iterator( hash[:symbol] ) { |o| o.foo }
 
 * Brackets may or may not be accompanied by space, at your discretion.
   These are both okay:
@@ -289,6 +297,8 @@ when you contribute to my code, please follow these rules:"
 * Write for Ruby 1.9+, except when required to maintain legacy code.
 
 * Avoid needless metaprogramming.
+
+* Err on the side of more spaces or newlines.
 
 * Do not mess around in core classes when writing libraries.
 
