@@ -298,6 +298,8 @@ adhere to the following core principles:
 
 * Avoid needless metaprogramming.
 
+* Don't engage in code golfing or newline golfing.
+
 * Err on the side of more spaces or newlines.
 
 * Do not mess around in core classes when writing libraries.
