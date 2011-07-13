@@ -100,7 +100,7 @@ adhere to the following core principles:
 
 * Never use "then".
 
-* Never use "unless"; always use "if !"
+* Never use "unless"; always use "if" with "!".
 
 * Use when x; ... for one-line cases.
 
