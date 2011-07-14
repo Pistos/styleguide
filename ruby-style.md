@@ -125,6 +125,13 @@ adhere to the following core principles:
 
 * Use {} when using the return value of a block, or when a small block can fit on one line; use do-end otherwise.
 
+* Never call a method on a do-end block.  Use {}.
+
+        # Don't:
+        lambda do
+          # ...
+        end.should # ...
+
 * Multiline {} blocks are fine.
 
 * Only use "return" when prematurely exiting a method (i.e. never at the end of
