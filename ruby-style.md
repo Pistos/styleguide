@@ -295,6 +295,12 @@ adhere to the following core principles:
           here
         end
 
+* Restrict bare identifiers to "nearby" code, where possible, to reduce how
+  much the reader has to search for definition or initialization.  To this end,
+  decorate identifiers as much as possible:
+  * Don't use accessor methods in a class code (use the instance variables themselves).
+  * Prefix with `self.` for a class's own methods, including accessors.
+
 * Use def self.method to define singleton methods.
 
 * Symbols are for internal use only: If it comes in as input, or goes out as
