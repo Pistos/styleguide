@@ -298,10 +298,12 @@ adhere to the following core principles:
 * Use def self.method to define singleton methods.
 
 * Symbols are for internal use only: If it comes in as input, or goes out as
-  output, it should be a String. If you find yoursef applying to_s to Symbols,
-  they should have been a Strings to begin with.
+  output, it should be a String. If you find yourself applying to_s to Symbols,
+  they should have been Strings to begin with.  Avoid turning Strings into
+  Symbols (just use the Strings).
 
-* Add "global" methods to Kernel (if you have to) and make them private.
+* If you must add "global" methods, add them to Kernel (if you have to) and
+  make them private.
 
 * Avoid alias when alias_method will do.
 
