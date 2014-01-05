@@ -151,6 +151,32 @@ adhere to the following core principles:
           ( v = calculation(@foo) ) && v > 10
         end
 
+* Never assign the result of an if block.
+
+        # Avoid:
+        foo = if condition
+          bar(blah, bleh)
+        else
+          baz(bluh, blih)
+        end
+
+        # Better:
+        if condition
+          foo = bar(blah, bleh)
+        else
+          foo = baz(bluh, blih)
+        end
+
+        # Avoid:
+        foo = if condition
+          short_expression
+        else
+          small_expression
+        end
+
+        # Better:
+        foo = condition ? short_expression : small_expression
+
 * Use ||= freely.
 
 * Only use "common" sigil variables.
