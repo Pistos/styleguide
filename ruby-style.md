@@ -321,11 +321,13 @@ adhere to the following core principles:
           here
         end
 
-* Restrict bare identifiers to "nearby" code, where possible, to reduce how
-  much the reader has to search for definition or initialization.  To this end,
-  decorate identifiers as much as possible:
+* Restrict bare (unadorned) identifiers to "nearby" code, where possible, to
+  reduce how much the reader has to search for definition or initialization.
+  To this end, prefer decorated identifiers as much as possible, when given
+  a choice:
   * Don't use accessor methods in a class code (use the instance variables themselves).
   * Prefix with `self.` for a class's own methods, including accessors.
+  * Don't use `let` in specs.
 
 * Use def self.method to define singleton methods.
 
@@ -339,7 +341,7 @@ adhere to the following core principles:
 
 * Avoid alias when alias_method will do.
 
-* Write for Ruby 1.9+, except when required to maintain legacy code.
+* Write for Ruby 2.0+, except when required to maintain legacy code.
 
 * Avoid needless metaprogramming.
 
@@ -347,11 +349,11 @@ adhere to the following core principles:
 
 * Err on the side of more spaces or newlines.
 
-* Do not mess around in core classes when writing libraries.
-
 * Make your code read vertically, not horizontally;
   make it tall, not wide;
   many short lines, not few long lines.
+
+* Do not mess around in core classes when writing libraries.
 
 * Keep things as simple as possible (but no simpler).
 
