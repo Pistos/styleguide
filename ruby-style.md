@@ -12,11 +12,19 @@ when you contribute to my code, please follow these rules:"
 ## Principles
 
 Almost all the individual points below are manifestations of an intent to
-adhere to the following core principles:
+adhere to one core principle:
 
-1. Communicate design and intent.
-2. Reveal structure and hierarchy.
-3. Make expressions distinct.
+** Write code in a way that helps future coders understand and manipulate the code quickly and easily. **
+
+Brevity and superficial visual aesthetics should not be favoured at the expense
+of this main principle.
+
+Some subprinciples:
+
+1. Be considerate of the reader.
+2. Communicate design and intent.
+3. Reveal structure and hierarchy.
+4. Make expressions distinct.
 
 ## Formatting
 
