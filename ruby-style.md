@@ -347,6 +347,8 @@ Some subprinciples:
 * If you must add "global" methods, add them to Kernel (if you have to) and
   make them private.
 
+* Avoid usage of private and protected.  Test your code well, instead.
+
 * Avoid alias when alias_method will do.
 
 * Write for Ruby 2.0+, except when required to maintain legacy code.
