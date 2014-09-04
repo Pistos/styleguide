@@ -14,7 +14,7 @@ when you contribute to my code, please follow these rules:"
 Almost all the individual points below are manifestations of an intent to
 adhere to one core principle:
 
-** Write code in a way that helps future coders understand and manipulate the code quickly and easily. **
+**Write code in a way that helps future coders understand and manipulate the code quickly and easily.**
 
 Brevity and superficial visual aesthetics should not be favoured at the expense
 of this main principle.
