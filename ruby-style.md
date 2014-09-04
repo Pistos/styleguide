@@ -281,7 +281,7 @@ Some subprinciples:
 
 * Avoid comments; aim for self-explanatory code.
 
-* Use yardoc and its conventions for API documentation.  http://yard.soen.ca/
+* Use yardoc and its conventions for API documentation.  http://yardoc.org/
 
 * Prefer method and class comments; avoid comments inside methods.
 
